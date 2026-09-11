@@ -55,7 +55,7 @@ resource "aws_eks_cluster" "mycluster" { // EKS Cluster resource
   role_arn = aws_iam_role.eks_cluster_role.arn // IAM role for the cluster
 
   vpc_config {
-    subnet_ids = data.aws_subnets.default.ids // Use all subnets in the default VPC
+    subnet_ids = data.aws_subnet.default.ids // Use all subnets in the default VPC
   }
 
   depends_on = [
