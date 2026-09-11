@@ -11,7 +11,7 @@ data "aws_subnets" "default" { //fetch all subnets in the default vpc
 
 resource "aws_iam_role" "eks_cluster_role" { // IAM role for EKS cluster
     name = "eks_cluster_role" // Name of the cluster role
-   assume_role_policy = jsonencode({ // Assume role policy
+    assume_role_policy = jsonencode({ // Assume role policy
     Version = "2012-10-17"
     Statement = [{
       Effect    = "Allow"
